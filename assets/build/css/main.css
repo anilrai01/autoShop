@@ -11692,9 +11692,13 @@ body {
   transition: 0.3s ease-in-out;
   padding: 5px 10px; }
 
-.navbar .container .collapse .search-icon {
-  font-size: 1.5rem;
-  color: #262680; }
+.navbar .container .collapse .navbar-nav form {
+  flex-flow: row wrap; }
+  .navbar .container .collapse .navbar-nav form input {
+    width: 20rem; }
+  .navbar .container .collapse .navbar-nav form .search-icon {
+    font-size: 2rem;
+    color: #262680; }
 
 /* 7. Content */
 /* 8. Footer */
@@ -11704,7 +11708,6 @@ footer {
   background-color: #262680;
   color: #fff; }
   footer .container .sections {
-    overflow: hidden;
     padding: 20px; }
     footer .container .sections h2 {
       margin-bottom: 25px;
@@ -11713,11 +11716,11 @@ footer {
     footer .container .sections ul li {
       display: inline-block; }
       footer .container .sections ul li a {
-        font-size: 15px;
+        font-size: 1rem;
         color: #fff;
         white-space: nowrap; }
         footer .container .sections ul li a i {
-          font-size: 15px; }
+          font-size: 1.25rem; }
     footer .container .sections .card {
       background-color: transparent;
       border: 0px;
@@ -11726,6 +11729,7 @@ footer {
       footer .container .sections .card .card-body {
         padding: 10px 20px; }
         footer .container .sections .card .card-body .card-title {
+          font-size: 1.7rem;
           line-height: 5px;
           font-weight: 700; }
   footer .copyright-container {
@@ -11748,18 +11752,49 @@ footer {
 
 @media screen and (max-width: 1200px) {
   :root {
-    font-size: 8.6px; } }
+    font-size: 8.6px; }
+  .navbar-toggler {
+    width: 70px;
+    height: 40px; }
+    .navbar-toggler .navbar-toggler-icon {
+      font-size: 16px; }
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start; }
+    .navbar-collapse ul {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 0 !important; }
+      .navbar-collapse ul li {
+        text-align: center; }
+    .navbar-collapse form {
+      flex-flow: row nowrap; }
+  footer .sections .card .card-body .card-title {
+    font-size: 1rem; }
+  footer .sections .card .card-body .card-text {
+    font-size: 1.3rem; } }
 
 @media screen and (max-width: 991px) {
   :root {
     font-size: 15px; }
-  .search-field {
-    margin: 0 0 0 55px; } }
+  footer .sections .card .card-body .card-title {
+    font-size: 1rem !important; }
+  footer .sections .card .card-body .card-text {
+    font-size: 0.7rem; }
+  footer .sections .nav .nav-item a {
+    font-size: 0.8rem; } }
 
 @media screen and (max-width: 768px) {
   :root {
     font-size: 12.4px; } }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 768px) and (max-width: 420px) {
   :root {
-    font-size: 8.5px; } }
+    font-size: 8.5px; }
+  footer .container .sections {
+    justify-content: center; }
+    footer .container .sections .nav .nav-item .nav-link {
+      font-size: 1.5rem; } }

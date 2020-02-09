@@ -88,7 +88,7 @@ function css() {
     .pipe(sourcemaps.init()) // sourcemap
     .pipe(sass()) // scss -> css
     .pipe(autoprefixer()) // add autoprefix
-    .pipe(gulp.dest(path.build.css))
+    .pipe(gulp.dest(path.build.css)) // uploading finished files
     .pipe(rename({ suffix: ".min" }))
     .pipe(cleanCSS()) // minify CSS
     .pipe(sourcemaps.write("./")) //  write sourcemap
