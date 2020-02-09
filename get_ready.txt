@@ -1,0 +1,33 @@
+npm install gulp-cli -g
+
+npm init
+
+npm install --save-dev gulp gulp-sass gulp-clean-css gulp-imagemin imagemin-jpeg-recompress imagemin-pngquant gulp-rimraf gulp-rename gulp-rigger gulp-plumber browser-sync gulp-autoprefixer gulp-sourcemaps bootstrap gulp-cache
+
+//
+folder 
+//
+
+assets  ->  build ( automic builds from gulp)
+                -> fonts
+                -> images
+                -> styles
+                -> js
+                -> pages
+                        -> Home
+                        -> About US
+                        -> Contact US
+                        -> Trending
+                                    ..so on
+        ->  src (work in this folder)
+                -> fonts
+                -> images
+                -> styles
+                -> js
+                -> pages
+                        -> Home
+                        -> About US
+                        -> Contact US
+                        -> Trending
+                                    ..so on
+
