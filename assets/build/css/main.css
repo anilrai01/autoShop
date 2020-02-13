@@ -11826,17 +11826,29 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  border-bottom: 10px solid #262680;
+  box-shadow: 0 -10px 0 inset #262680;
   box-sizing: border-box;
   color: #fff;
-  font-size: 25px; }
+  font-size: 25px;
+  margin-bottom: 15px; }
   .bread-crumb .bread-crumb-title {
     padding: 7px 15px;
     display: inline-block;
     background-color: #262680; }
 
+.sm-bred {
+  box-shadow: 0 -8px 0 inset #262680; }
+  .sm-bred .sm-bred-title {
+    padding: 2px 20px; }
+
 section {
-  margin-bottom: 100px; }
+  margin-bottom: 90px; }
+
+.side-advertise {
+  height: 25.25rem;
+  overflow: hidden; }
+  .side-advertise img {
+    height: inherit; }
 
 /*
 //Functions
@@ -11955,6 +11967,22 @@ section {
         position: relative; }
         .trending .trend-container .two .second .card-right-bot img {
           height: inherit; }
+
+section.top-featured .featured-cards {
+  display: flex;
+  flex-direction: column; }
+  section.top-featured .featured-cards .card {
+    width: 26rem;
+    height: 17rem; }
+    section.top-featured .featured-cards .card img {
+      height: inherit; }
+
+section.top-featured .side-feature {
+  width: 24.87rem;
+  display: flex;
+  flex-direction: column; }
+  section.top-featured .side-feature .side-advertise {
+    width: 100%; }
 
 /* 8. Footer */
 footer {
