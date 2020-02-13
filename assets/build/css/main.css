@@ -11882,22 +11882,6 @@ section {
   height: 28.375rem;
   overflow: hidden; }
 
-.trending .trend-container .card-left {
-  width: 50.625rem;
-  height: 51.25rem;
-  overflow: hidden; }
-
-.trending .trend-container .card-right-top {
-  height: 28.375rem;
-  overflow: hidden;
-  position: relative; }
-
-.trending .trend-container .two .second .card-right-bot {
-  width: 25.125rem;
-  height: 22.5rem;
-  overflow: hidden;
-  position: relative; }
-
 .home-banner {
   height: 57.18rem; }
   .home-banner .home-hero-img-wrapper {
@@ -11940,22 +11924,37 @@ section {
 
 .trending .trend-container {
   height: 51.25rem; }
-  .trending .trend-container .card-left img {
-    height: inherit; }
-  .trending .trend-container .card-right-top {
-    margin: 0; }
-    .trending .trend-container .card-right-top img {
-      height: inherit;
-      width: 100%; }
+  .trending .trend-container .card-left {
+    width: 50.625rem;
+    height: 51.25rem;
+    overflow: hidden; }
+    .trending .trend-container .card-left img {
+      height: inherit; }
   .trending .trend-container .two {
+    height: 51.25rem;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; }
+    .trending .trend-container .two .first {
+      height: 25.3rem;
+      overflow: hidden;
+      position: relative;
+      margin: 0; }
+      .trending .trend-container .two .first img {
+        height: inherit;
+        width: 100%; }
     .trending .trend-container .two .second {
       display: flex;
       flex-direction: row;
       justify-content: space-between; }
-      .trending .trend-container .two .second .card-right-bot img {
-        height: inherit; }
+      .trending .trend-container .two .second .card-right-bot {
+        width: 25.3rem;
+        height: 25rem;
+        overflow: hidden;
+        position: relative; }
+        .trending .trend-container .two .second .card-right-bot img {
+          height: inherit; }
 
 /* 8. Footer */
 footer {
