@@ -11984,6 +11984,68 @@ section.top-featured .side-feature {
   section.top-featured .side-feature .side-advertise {
     width: 100%; }
 
+section.freq-ask-ques h3 {
+  font-weight: 700 !important; }
+
+section.freq-ask-ques .card .card-header {
+  background: #e4ebf2;
+  border-left: 5px solid #262680;
+  margin-bottom: 20px; }
+  section.freq-ask-ques .card .card-header h2 .btn-link {
+    font-size: 1.25rem !important;
+    color: #262680 !important;
+    font-weight: 600;
+    text-decoration: none; }
+  section.freq-ask-ques .card .card-header h2 .btn-link:after {
+    content: "\2212";
+    width: 35px;
+    font-size: 1.875rem;
+    text-align: center;
+    right: 20px;
+    top: 8px;
+    position: absolute; }
+  section.freq-ask-ques .card .card-header h2 .btn-link.collapsed:after {
+    content: "\002B"; }
+  section.freq-ask-ques .card .card-header h2 .btn-link.collapsed:before {
+    height: 0;
+    width: 0; }
+  section.freq-ask-ques .card .card-header h2 .btn-link:before {
+    content: "";
+    height: 2.5rem;
+    width: 2.5rem;
+    top: 3rem;
+    position: absolute;
+    background: #e4ebf2;
+    z-index: 1;
+    transform: rotate(45deg);
+    transition: 0.3s ease-in-out; }
+
+section.freq-ask-ques .card .card-body {
+  padding: 1.25rem 2.5rem;
+  text-align: justify; }
+
+section.freq-ask-ques .side-fnq {
+  display: flex;
+  flex-direction: column; }
+  section.freq-ask-ques .side-fnq .quad-row .f-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px; }
+    section.freq-ask-ques .side-fnq .quad-row .f-div .card-img-top-fnq {
+      width: 11.5rem;
+      height: 8rem;
+      overflow: hidden; }
+      section.freq-ask-ques .side-fnq .quad-row .f-div .card-img-top-fnq img {
+        height: inherit; }
+    section.freq-ask-ques .side-fnq .quad-row .f-div h5 {
+      font-weight: 600 !important; }
+    section.freq-ask-ques .side-fnq .quad-row .f-div p {
+      line-height: 10px; }
+  section.freq-ask-ques .side-fnq .quad-row .s-div {
+    display: flex;
+    flex-direction: row; }
+
 /* 8. Footer */
 footer {
   width: 100%;
