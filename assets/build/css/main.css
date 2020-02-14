@@ -11692,13 +11692,6 @@ body {
     color: #262680;
     transition: 0.3s ease-in-out;
     padding: 5px 10px; }
-  .navbar .container .collapse .navbar-nav form {
-    flex-flow: row wrap; }
-    .navbar .container .collapse .navbar-nav form input {
-      width: 20rem; }
-    .navbar .container .collapse .navbar-nav form .search-icon {
-      font-size: 2rem;
-      color: #262680; }
 
 * {
   margin: 0;
@@ -11714,16 +11707,22 @@ body {
 
 .row,
 .col,
+.col-md-2,
+.col-md-3,
 .col-md-4,
 .col-md-6,
 .col-md-8,
 .col-md-10,
 .col-md-12,
+.col-sm-2,
+.col-sm-3,
 .col-sm-4,
 .col-sm-6,
 .col-sm-8,
 .col-sm-10,
 .col-sm-12,
+.col-lg-2,
+.col-lg-3,
 .col-lg-4,
 .col-lg-6,
 .col-lg-8,
@@ -11738,50 +11737,54 @@ body {
   margin: 0;
   border: none; }
 
+.f-bold {
+  font-weight: 700; }
+
+.f-semibold {
+  font-weight: 600; }
+
+.f-regular {
+  font-weight: 400; }
+
 .display-1 {
-  font-size: 2.5rem !important;
-  font-weight: 600 !important;
+  font-size: 2.5rem;
   color: #fff; }
 
 .display-2 {
-  font-size: 2.1875rem !important;
-  font-weight: 600 !important;
+  font-size: 2.1875rem;
   color: #fff; }
 
 .display-3 {
-  font-size: 1.1 0.875rem !important;
-  font-weight: 400 !important;
+  font-size: 1.875rem;
   color: #fff; }
 
 .display-4 {
-  font-size: 1.5625rem !important;
-  font-weight: 600 !important;
+  font-size: 1.5625rem;
   color: #fff; }
 
 .display-5 {
-  font-size: 1.5rem !important;
-  font-weight: 400 !important;
+  font-size: 1.5rem;
   color: #fff; }
 
 .display-6 {
-  font-size: 1.25rem !important;
-  font-weight: 400 !important;
+  font-size: 1.25rem;
   color: #fff; }
 
 .display-7 {
-  font-size: 1.125rem !important;
-  font-weight: 400 !important;
+  font-size: 1.125rem;
   color: #fff; }
 
 .display-8 {
-  font-size: 0.9375rem !important;
-  font-weight: 400 !important;
+  font-size: 0.9375rem;
   color: #fff; }
 
 .display-9 {
-  font-size: 0.75rem !important;
-  font-weight: 400 !important;
+  font-size: 0.75rem;
   color: #fff; }
+
+.s-icon {
+  font-size: 1.5rem;
+  color: #262680; }
 
 .tag1 {
   font-size: 10px;
@@ -11850,53 +11853,12 @@ section {
   .side-advertise img {
     height: inherit; }
 
-/*
-//Functions
-//, $title-font, $title-weight, $content-size, $color
-@mixin tag-style($tag-color, $tag-text, $tag-text-color) {
-  color: $tag-text-color;
-  font-size: $tag-text;
-  background-color: $tag-color;
-}
-@mixin in-style($in-text, $in-text-color) {
-  color: $in-text-color;
-  font-size: $in-text;
-}
-
-//Big Tag
-.big-tag {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 10px;
-  background-color: red;
-  .tag-title {
-    @include tag-style($tag, $small-content, $white);
-    padding: 5px 10px;
-  }
-  .tag-banner {
-    @include in-style($heading, $white);
-  }
-
-  .tag-date {
-    @include in-style($small-headingi, $white);
-  }
-}
-*/
 /* 7. Content */
-.home-banner .home-hero-img-wrapper {
-  width: 67.9375rem;
-  height: 57.5rem;
-  overflow: hidden; }
-
-.home-banner .home-ch-row .home-hero-2 .home-hero-2-img-wrapper, .home-banner .home-hero-3 {
-  width: 35rem;
-  height: 28.375rem;
-  overflow: hidden; }
-
 .home-banner {
   height: 57.18rem; }
   .home-banner .home-hero-img-wrapper {
+    width: 67.9375rem;
+    height: 57.5rem;
     position: relative;
     overflow: hidden; }
     .home-banner .home-hero-img-wrapper img {
@@ -11905,68 +11867,72 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
-    .home-banner .home-ch-row .home-hero-2 .home-hero-2-img-wrapper {
-      position: relative;
-      overflow: hidden; }
-      .home-banner .home-ch-row .home-hero-2 .home-hero-2-img-wrapper img {
+    .home-banner .home-ch-row .home-hero-2-img-wrapper {
+      width: 35rem;
+      height: 28.375rem;
+      overflow: hidden;
+      position: relative; }
+      .home-banner .home-ch-row .home-hero-2-img-wrapper img {
         height: inherit; }
 
-.hot-news .video-session {
-  width: 24.87rem;
-  height: 18.25rem; }
-  .hot-news .video-session iframe {
-    width: 100%;
-    height: 100%; }
+.hot-news {
+  height: auto; }
+  .hot-news .side-news-resp {
+    padding-left: 1.5rem; }
+    .hot-news .side-news-resp .video-session {
+      width: 24.87rem;
+      height: 18.25rem; }
+      .hot-news .side-news-resp .video-session iframe {
+        width: 100%;
+        height: 100%; }
+    .hot-news .side-news-resp .follow-us-session {
+      width: 25rem;
+      background-color: #f7f7f7;
+      padding: 20px 30px;
+      border-top: 0.625rem solid #262680; }
+      .hot-news .side-news-resp .follow-us-session h2 {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 3rem;
+        color: #262680; }
+      .hot-news .side-news-resp .follow-us-session p {
+        font-size: 12px;
+        text-align: justify; }
+      .hot-news .side-news-resp .follow-us-session .icons {
+        color: #262680; }
 
-.hot-news .follow-us-session {
-  width: 25rem;
-  background-color: #f7f7f7;
-  padding: 20px 30px;
-  border-top: 0.625rem solid #262680; }
-  .hot-news .follow-us-session h2 {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 3rem;
-    color: #262680; }
-  .hot-news .follow-us-session p {
-    font-size: 12px;
-    text-align: justify; }
-  .hot-news .follow-us-session .icons {
-    color: #262680; }
+.trending .trend-container .card-left {
+  width: 50.625rem;
+  height: 51.25rem;
+  overflow: hidden; }
+  .trending .trend-container .card-left img {
+    height: inherit; }
 
-.trending .trend-container {
-  height: 51.25rem; }
-  .trending .trend-container .card-left {
-    width: 50.625rem;
-    height: 51.25rem;
-    overflow: hidden; }
-    .trending .trend-container .card-left img {
-      height: inherit; }
-  .trending .trend-container .two {
-    height: 51.25rem;
+.trending .trend-container .two {
+  height: 51.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%; }
+  .trending .trend-container .two .first {
+    height: 25.3rem;
+    overflow: hidden;
+    position: relative;
+    margin: 0; }
+    .trending .trend-container .two .first img {
+      height: inherit;
+      width: 100%; }
+  .trending .trend-container .two .second {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%; }
-    .trending .trend-container .two .first {
-      height: 25.3rem;
+    flex-direction: row;
+    justify-content: space-between; }
+    .trending .trend-container .two .second .card-right-bot {
+      width: 25.3rem;
+      height: 25rem;
       overflow: hidden;
-      position: relative;
-      margin: 0; }
-      .trending .trend-container .two .first img {
-        height: inherit;
-        width: 100%; }
-    .trending .trend-container .two .second {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between; }
-      .trending .trend-container .two .second .card-right-bot {
-        width: 25.3rem;
-        height: 25rem;
-        overflow: hidden;
-        position: relative; }
-        .trending .trend-container .two .second .card-right-bot img {
-          height: inherit; }
+      position: relative; }
+      .trending .trend-container .two .second .card-right-bot img {
+        height: inherit; }
 
 section.top-featured .featured-cards {
   display: flex;
@@ -12074,7 +12040,6 @@ footer {
       footer .container .sections .card .card-body {
         padding: 10px 20px; }
         footer .container .sections .card .card-body .card-title {
-          font-size: 1.7rem;
           line-height: 5px;
           font-weight: 700; }
   footer .copyright-container {
@@ -12085,7 +12050,9 @@ footer {
 /*  Media Section */
 @media screen and (max-width: 1855px) {
   :root {
-    font-size: 13.333px; } }
+    font-size: 13.333px; }
+  .container {
+    width: 123.75rem; } }
 
 @media screen and (max-width: 1600px) {
   :root {
@@ -12098,6 +12065,8 @@ footer {
 @media screen and (max-width: 1200px) {
   :root {
     font-size: 8.6px; }
+  .container {
+    width: 191.86rem; }
   .navbar-toggler {
     width: 70px;
     height: 40px; }
@@ -12116,21 +12085,58 @@ footer {
       .navbar-collapse ul li {
         text-align: center; }
     .navbar-collapse form {
-      flex-flow: row nowrap; }
-  footer .sections .card .card-body .card-title {
-    font-size: 1rem; }
-  footer .sections .card .card-body .card-text {
-    font-size: 1.3rem; } }
+      flex-flow: row nowrap; } }
 
 @media screen and (max-width: 991px) {
   :root {
     font-size: 15px; }
-  footer .sections .card .card-body .card-title {
-    font-size: 1rem !important; }
-  footer .sections .card .card-body .card-text {
-    font-size: 0.7rem; }
-  footer .sections .nav .nav-item a {
-    font-size: 0.8rem; } }
+  body {
+    padding-top: 3rem; }
+  .container {
+    max-width: 59.33rem; }
+  .navbar {
+    height: 5rem; }
+  .home-banner {
+    height: auto; }
+    .home-banner .row {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .home-banner .row .home-hero-img-wrapper {
+        width: 100%;
+        height: 40rem;
+        margin-bottom: 8px; }
+        .home-banner .row .home-hero-img-wrapper .prod-tag {
+          padding: 20px; }
+      .home-banner .row .home-ch-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%; }
+        .home-banner .row .home-ch-row .home-hero-2-img-wrapper {
+          height: 22.5rem;
+          width: 29.4rem; }
+  .hot-news {
+    height: auto; }
+    .hot-news .bread-crumb-title {
+      font-size: 1.25rem; }
+    .hot-news .left-news-a .card .card-title {
+      font-size: 1.5625rem;
+      font-weight: 600; }
+    .hot-news .left-news-a .card .card-text {
+      font-size: 0.9375rem; }
+    .hot-news .left-news-b .card .card-title {
+      font-size: 1.25rem; }
+    .hot-news .left-news-b .card .card-text {
+      font-size: 0.9375rem; }
+    .hot-news .side-news-resp {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+      padding: 0 !important; }
+      .hot-news .side-news-resp .follow-us-session {
+        width: 30rem; } }
 
 @media screen and (max-width: 768px) {
   :root {
@@ -12138,8 +12144,4 @@ footer {
 
 @media screen and (max-width: 768px) and (max-width: 420px) {
   :root {
-    font-size: 8.5px; }
-  footer .container .sections {
-    justify-content: center; }
-    footer .container .sections .nav .nav-item .nav-link {
-      font-size: 1.5rem; } }
+    font-size: 8.5px; } }
