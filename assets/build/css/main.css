@@ -11866,6 +11866,53 @@ section {
     .side-news-resp .follow-us-session .icons {
       color: #262680; }
 
+.new-follow-us {
+  position: relative;
+  width: 100%;
+  background: #f7f7f7;
+  padding: 1.8rem 2rem 3rem; }
+  .new-follow-us span {
+    color: #858585;
+    padding-bottom: 1rem; }
+  .new-follow-us h3 {
+    color: #262680;
+    font-weight: bold; }
+  .new-follow-us .handle-grid {
+    display: flex;
+    flex-direction: column; }
+    .new-follow-us .handle-grid .grid-info {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .new-follow-us .handle-grid .grid-info .info {
+        flex-basis: 80%;
+        display: flex;
+        justify-content: flex-start; }
+        .new-follow-us .handle-grid .grid-info .info img {
+          width: 25px;
+          height: 25px; }
+        .new-follow-us .handle-grid .grid-info .info .handle {
+          display: flex;
+          flex-direction: column; }
+          .new-follow-us .handle-grid .grid-info .info .handle h5 {
+            color: #4e4e4e;
+            font-size: 14px; }
+          .new-follow-us .handle-grid .grid-info .info .handle span {
+            font-size: 10px; }
+      .new-follow-us .handle-grid .grid-info .but {
+        flex-basis: 20%;
+        font-size: 1.2rem; }
+
+.new-follow-us::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: #262680; }
+
 /* 7. Content */
 .home-banner {
   margin-top: 6rem; }
@@ -12091,14 +12138,44 @@ section.freq-ask-ques .side-fnq {
     justify-content: space-evenly;
     flex-wrap: wrap; }
 
+.about-us {
+  margin-top: 6rem; }
+  .about-us .empire h2 {
+    color: #262680; }
+  .about-us .empire .quote-block {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row; }
+    .about-us .empire .quote-block img {
+      width: 60px;
+      height: 60px; }
+  .about-us .values h2 {
+    color: #262680; }
+  .about-us .veh-grid {
+    display: flex;
+    flex-direction: column; }
+    .about-us .veh-grid .veh-card {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 2rem; }
+      .about-us .veh-grid .veh-card .veh-img {
+        width: 200px;
+        height: 80px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; }
+      .about-us .veh-grid .veh-card .veh-cont .veh-date {
+        font-size: 12px; }
+
 .tym-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%; }
   .tym-row .tym-col .card {
-    width: 320px;
-    height: 400px;
+    width: 290px;
+    height: 350px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -12112,6 +12189,35 @@ section.freq-ask-ques .side-fnq {
       align-items: center; }
       .tym-row .tym-col .card .card-img-top img {
         height: 100%; }
+
+.trending {
+  margin-top: 6rem !important; }
+
+#top-featured {
+  margin-top: 6rem; }
+  #top-featured .f-hero {
+    position: relative;
+    width: 100%;
+    height: 80vh; }
+    #top-featured .f-hero .f-hero-img {
+      width: inherit;
+      height: inherit;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; }
+    #top-featured .f-hero .f-wrapper {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 50%;
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)); }
+    #top-featured .f-hero .f-heading .tag {
+      font-size: 1.2rem; }
+    #top-featured .f-hero .f-heading h1 {
+      font-size: 3rem; }
+    #top-featured .f-hero .f-heading .tag-date {
+      font-size: 1.2rem; }
 
 /* 8. Footer */
 footer {
