@@ -11682,14 +11682,31 @@ body {
   font-weight: 900;
   color: #262680; }
 
-.navbar .container .collapse .navbar-nav .nav-item a.active, .navbar .container .collapse .navbar-nav .nav-item:hover a {
-  border-left: 4px solid #262680; }
+.navbar .container .collapse .navbar-nav .nav-item {
+  position: relative;
+  transition: 0.3s ease; }
+  .navbar .container .collapse .navbar-nav .nav-item a {
+    font-size: 15px;
+    color: #262680;
+    transition: 0.3s ease-in-out;
+    padding: 5px 10px; }
 
-.navbar .container .collapse .navbar-nav .nav-item a {
-  font-size: 15px;
-  color: #262680;
-  transition: 0.3s ease-in-out;
-  padding: 5px 10px; }
+.navbar .container .collapse .navbar-nav .nav-item::before {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: 0;
+  width: 0;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  height: 5px;
+  background: #262680;
+  transition: 0.3s ease; }
+
+.navbar .container .collapse .navbar-nav .nav-item:hover::before,
+.navbar .container .collapse .navbar-nav .nav-item.active::before {
+  transform: scaleX(0.8);
+  width: 100%; }
 
 * {
   margin: 0;
@@ -11845,14 +11862,15 @@ section {
   .side-advertise img {
     height: inherit; }
 
+.video-session {
+  width: 100%;
+  height: 18.25rem; }
+  .video-session iframe {
+    width: 100%;
+    height: 100%; }
+
 .side-news-resp {
   padding-left: 1.5rem; }
-  .side-news-resp .video-session {
-    width: 25rem;
-    height: 18.25rem; }
-    .side-news-resp .video-session iframe {
-      width: 100%;
-      height: 100%; }
   .side-news-resp .follow-us-session {
     width: 25rem;
     background-color: #f7f7f7;
@@ -11916,6 +11934,12 @@ section {
 
 .text-brand {
   color: #262680 !important; }
+
+.text-heading {
+  color: #4e4e4e; }
+
+.text-soft {
+  color: #858585; }
 
 .margin-5 {
   margin-top: 5rem; }
@@ -12170,21 +12194,22 @@ section.freq-ask-ques .side-fnq {
         height: 60px; }
   .about-us .values h2 {
     color: #262680; }
-  .about-us .veh-grid {
+
+.veh-grid {
+  display: flex;
+  flex-direction: column; }
+  .veh-grid .veh-card {
     display: flex;
-    flex-direction: column; }
-    .about-us .veh-grid .veh-card {
-      display: flex;
-      flex-direction: row;
-      margin-bottom: 2rem; }
-      .about-us .veh-grid .veh-card .veh-img {
-        width: 200px;
-        height: 80px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat; }
-      .about-us .veh-grid .veh-card .veh-cont .veh-date {
-        font-size: 12px; }
+    flex-direction: row;
+    margin-bottom: 2rem; }
+    .veh-grid .veh-card .veh-img {
+      width: 200px;
+      height: 80px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; }
+    .veh-grid .veh-card .veh-cont .veh-date {
+      font-size: 12px; }
 
 .tym-row {
   display: flex;
@@ -12219,11 +12244,6 @@ section.freq-ask-ques .side-fnq {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.16); }
     #contact-page .input-form textarea {
       resize: vertical; }
-    #contact-page .input-form .my-btn {
-      background-color: #262680;
-      text-transform: uppercase;
-      padding: 0.8rem 7rem;
-      font-size: 1.1rem; }
   #contact-page h3.details {
     margin: 6rem 6rem 4rem 6rem;
     padding: 0;
@@ -12269,6 +12289,12 @@ section.freq-ask-ques .side-fnq {
         flex-direction: column;
         font-weight: 600; }
 
+.my-btn {
+  background-color: #262680;
+  text-transform: uppercase;
+  padding: 0.8rem 7rem;
+  font-size: 1.1rem; }
+
 #top-featured {
   margin-top: 6rem; }
   #top-featured .f-hero {
@@ -12294,6 +12320,93 @@ section.freq-ask-ques .side-fnq {
       font-size: 3rem; }
     #top-featured .f-hero .f-heading .tag-date {
       font-size: 1.2rem; }
+
+#product {
+  margin: 6rem 0; }
+  #product .product-grid {
+    width: 100%;
+    height: 82vh;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 300px auto auto 300px;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-areas: "b2 b5 b5 b3" "b9 b5 b5 b6"; }
+    #product .product-grid .prod-item {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    #product .product-grid .prod-item:nth-child(1) {
+      grid-area: b2; }
+    #product .product-grid .prod-item:nth-child(2) {
+      grid-area: b3; }
+    #product .product-grid .prod-item:nth-child(3) {
+      grid-area: b5; }
+    #product .product-grid .prod-item:nth-child(4) {
+      grid-area: b6; }
+    #product .product-grid .prod-item:nth-child(5) {
+      grid-area: b9; }
+
+#prod-sec {
+  width: 100%;
+  height: 50vh; }
+
+.prod-desc-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between; }
+
+.prod-desc {
+  flex-basis: 31%;
+  height: 250px;
+  text-align: center;
+  margin-bottom: 8rem; }
+  .prod-desc .prod-list-item {
+    width: inherit;
+    height: inherit;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+
+.load-btn {
+  display: block !important;
+  margin: 3rem auto 8rem; }
+
+.quick-comp {
+  width: 100%;
+  height: auto;
+  padding: 4rem;
+  background: #e8f0fe; }
+  .quick-comp .parent-box-com {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    .quick-comp .parent-box-com .prod-comp-div {
+      flex-basis: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .quick-comp .parent-box-com .prod-comp-div .prod-comp-com {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+        .quick-comp .parent-box-com .prod-comp-div .prod-comp-com .prod-comp-o {
+          display: flex;
+          flex-direction: column; }
+          .quick-comp .parent-box-com .prod-comp-div .prod-comp-com .prod-comp-o .b-img {
+            width: 170px;
+            height: 150px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat; }
+      .quick-comp .parent-box-com .prod-comp-div .comp-btn {
+        display: inline-block;
+        background: #262680 !important;
+        margin: auto;
+        padding: 0.5rem 2rem; }
 
 /* 8. Footer */
 footer {
