@@ -132,19 +132,16 @@ function images() {
       )
     )
     .pipe(clip())
-    .pipe(gulp.dest(path.build.img));
+    .pipe(gulp.dest(path.build.img))
+    .pipe(webserver.reload({ stream: true }));
 }
 
 function watch() {
   webserver.init(config);
-  gulp.watch(path.watch.html, gulp.series(html)).on("change", webserver.reload);
-  gulp.watch(path.watch.css, gulp.series(css)).on("change", webserver.stream);
-  gulp
-    .watch(path.watch.js, gulp.series(javascript))
-    .on("change", webserver.reload);
-  gulp
-    .watch(path.watch.img, gulp.series(images))
-    .on("change", webserver.reload);
+  gulp.watch(path.watch.html, gulp.series(html));
+  gulp.watch(path.watch.css, gulp.series(css));
+  gulp.watch(path.watch.js, gulp.series(javascript));
+  gulp.watch(path.watch.img, gulp.series(images));
 }
 exports.watch = watch;
 exports.cclean = cclean;
