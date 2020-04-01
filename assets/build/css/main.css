@@ -12468,6 +12468,19 @@ section.freq-ask-ques .side-fnq {
       justify-content: flex-start;
       align-items: center; }
 
+.retail-list, .popularcomp-list {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  background: #e4ebf2; }
+  .retail-list ul, .popularcomp-list ul {
+    list-style: none; }
+    .retail-list ul li, .popularcomp-list ul li {
+      line-height: 3rem; }
+
+.popularcomp-list {
+  background: #e8f0fe; }
+
 /* 8. Footer */
 footer {
   width: 100%;
