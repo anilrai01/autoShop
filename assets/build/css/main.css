@@ -11861,7 +11861,7 @@ body {
     padding: 2px 20px; }
 
 section {
-  margin-bottom: 5rem; }
+  margin-bottom: 7rem; }
 
 .side-advertise {
   height: 25.25rem;
@@ -12219,6 +12219,7 @@ section.freq-ask-ques .side-fnq {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%; }
   .tym-row .tym-col .card {
     width: 290px;
@@ -12230,10 +12231,9 @@ section.freq-ask-ques .side-fnq {
     .tym-row .tym-col .card .card-img-top {
       width: 100%;
       height: 70%;
-      background: red;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
       .tym-row .tym-col .card .card-img-top img {
         height: 100%; }
 
