@@ -12328,7 +12328,8 @@ section.freq-ask-ques .side-fnq {
     padding: 0 6rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-wrap: wrap; }
     #contact-page .address .sub-ad {
       display: flex;
       flex-direction: row;
