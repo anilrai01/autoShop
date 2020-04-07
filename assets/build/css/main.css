@@ -12143,7 +12143,10 @@ section.freq-ask-ques .side-fnq {
   margin-top: 7rem; }
   #news-session .news-cont {
     width: 100%;
-    height: 42rem;
+    height: 40rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -12168,7 +12171,8 @@ section.freq-ask-ques .side-fnq {
     flex-direction: column;
     justify-content: center;
     text-align: justify;
-    padding: 1rem 2rem 1rem 0;
+    padding: 1rem 0 1rem 0;
+    margin: 1.5rem 0 1.5rem 0;
     line-height: 3rem; }
 
 .pop-tag {
