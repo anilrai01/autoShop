@@ -12209,7 +12209,7 @@ section.freq-ask-ques .side-fnq {
   .veh-grid .veh-card {
     display: flex;
     flex-direction: row;
-    margin-bottom: 2rem; }
+    margin-bottom: 1.5rem; }
     .veh-grid .veh-card .veh-img {
       width: 200px;
       height: 80px;
@@ -12217,25 +12217,29 @@ section.freq-ask-ques .side-fnq {
       background-position: center;
       background-repeat: no-repeat; }
     .veh-grid .veh-card .veh-cont .veh-date {
-      font-size: 12px; }
+      font-size: 1rem; }
 
 .tym-row {
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   width: 100%; }
-  .tym-row .tym-col .card {
-    height: 350px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
-    .tym-row .tym-col .card .card-img-top {
-      width: 100%;
-      height: 80%;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat; }
+  .tym-row .tym-col {
+    margin-bottom: 0.5rem; }
+    .tym-row .tym-col .card {
+      height: auto;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .tym-row .tym-col .card .card-img-top {
+        width: 100%;
+        height: 22rem;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; }
+      .tym-row .tym-col .card .card-body {
+        line-height: 1rem; }
 
 .trending {
   margin-top: 6rem !important; }
@@ -12568,15 +12572,16 @@ footer {
       color: #fff;
       margin-bottom: 20px; }
       footer .container .sections .card .f-thumb {
-        width: 12rem;
-        height: 10rem;
+        width: 7rem;
+        height: 6rem;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat; }
       footer .container .sections .card .card-body {
-        padding: 15px !important; }
+        padding: 6px 12px !important; }
         footer .container .sections .card .card-body .card-title {
-          font-weight: 600; }
+          font-weight: 600;
+          font-size: 16px; }
         footer .container .sections .card .card-body .card-text {
           font-size: 12px; }
   footer .copyright-container {
@@ -12777,7 +12782,13 @@ footer {
         width: 17rem;
         height: 17rem; }
   .fix-padding {
-    padding: 0 !important; } }
+    padding: 0 !important; }
+  .fix-hr-padding {
+    padding-right: 0 !important;
+    padding-left: 0 !important; }
+  .fix-vr-padding {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important; } }
 
 @media screen and (max-width: 768px) {
   :root {
@@ -12824,7 +12835,9 @@ footer {
     padding: 8px 12px !important; }
   footer .container .sections .card .f-thumb {
     width: 5rem !important;
-    height: 5rem !important; } }
+    height: 5rem !important; }
+  footer .container .sections {
+    padding: 5px; } }
 
 @media screen and (max-width: 420px) {
   :root {
@@ -12832,8 +12845,6 @@ footer {
   .container {
     width: 100%;
     padding: 0 1rem; }
-  .card-body {
-    padding: 7px !important; }
   .left-news-b {
     padding-left: 0 !important; }
   .hot-news-card-img-wrapper {
@@ -12849,11 +12860,18 @@ footer {
   .card-img-top-fnq {
     width: 100%;
     height: 10rem !important; }
+  .card-title {
+    font-size: 14px; }
+  .card-text small {
+    font-size: 1rem; }
   .veh-img {
     flex-basis: 40%;
     height: 100px !important; }
   .veh-cont {
-    flex-basis: 60%; }
+    flex-basis: 60%;
+    padding: 1rem; }
+  .veh-title {
+    font-size: 14px; }
   #prod-sec {
     width: 100%;
     height: auto; }
